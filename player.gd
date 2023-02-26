@@ -2,9 +2,9 @@ extends KinematicBody
 
 # var rng = RandomNumberGenerator.new()
 
-var base_speed = 0.8
+var base_speed = 0.55
 var base_swim_freq = 0.65
-var base_direction_delta = 0.01
+var base_direction_delta = 0.005
 
 var time : float
 

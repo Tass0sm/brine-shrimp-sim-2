@@ -23,3 +23,8 @@ transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0
 
 [node name="Camera" type="Camera" parent="Pivot"]
 fov = 110.0
+
+[node name="OmniLight" type="OmniLight" parent="."]
+light_energy = 2.0
+light_indirect_energy = 2.0
+shadow_enabled = true

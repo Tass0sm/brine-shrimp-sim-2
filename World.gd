@@ -19,8 +19,7 @@ func _ready():
 	$vomit_popup.hide()
 	$mating_popup.hide()
 	$algal_bloom_popup.hide()
-	
-	
+
 	$ambience.play()
 	pass
 

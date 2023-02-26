@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Brine Shrimp Simulator"
-run/main_scene="res://main_world.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [gui]

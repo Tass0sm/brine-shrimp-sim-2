@@ -321,6 +321,7 @@ stream = ExtResource( 6 )
 stream = ExtResource( 7 )
 
 [node name="vomit_popup" type="MarginContainer" parent="."]
+visible = false
 margin_left = 77.0
 margin_top = 430.0
 margin_right = 450.0
@@ -360,5 +361,26 @@ margin_right = 290.0
 margin_bottom = 97.0
 custom_fonts/font = ExtResource( 5 )
 text = "YOU MATED :)"
+align = 1
+valign = 1
+
+[node name="algal_bloom_popup" type="MarginContainer" parent="."]
+margin_left = 77.0
+margin_top = 430.0
+margin_right = 696.0
+margin_bottom = 539.0
+
+[node name="Panel" type="Panel" parent="algal_bloom_popup"]
+margin_right = 619.0
+margin_bottom = 109.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="Label" type="Label" parent="algal_bloom_popup/Panel"]
+margin_left = 26.0
+margin_top = 12.0
+margin_right = 593.0
+margin_bottom = 97.0
+custom_fonts/font = ExtResource( 5 )
+text = "YOU'RE IN AN ALGAL BLOOM!!!"
 align = 1
 valign = 1

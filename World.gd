@@ -16,9 +16,9 @@ func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	eventTakingPlace = false
 	
-	$vomit_popup.hide()
-	$mating_popup.hide()
-	$algal_bloom_popup.hide()
+	$GUI/vomit_popup.hide()
+	$GUI/mating_popup.hide()
+	$GUI/algal_bloom_popup.hide()
 
 	$ambience.play()
 	pass
@@ -35,23 +35,23 @@ func random_processes():
 		var randval = rand_range(0.0,1.0)
 		if randval < (3.0/(60.0*60.0)) and randval > (2.0/(60.0*60.0)):
 			# algal bloom event!
-			$algal_bloom_popup.show()
+			$GUI/algal_bloom_popup.show()
 			$fx_vomit3.play()
 			eventTakingPlace = true
 			eventBeginTime = time
 			eventType = 'algalBloom'
 		elif randval < (2.0/(60.0*60.0)) and randval > (1.0/(60.0*60.0)):
 			get_tree().paused = true
-			$vomit_popup.show()
+			$GUI/vomit_popup.show()
 			$fx_vomit3.play()
 		elif randval < (1.0/(60.0*60.0)):
 			get_tree().paused = true
-			$mating_popup.show()
+			$GUI/mating_popup.show()
 			$fx_splat1.play()
 	if time > eventDuration + eventBeginTime:
 		eventTakingPlace = false
 		if eventType == 'algalBloom':
-			$algal_bloom_popup.hide()
+			$GUI/algal_bloom_popup.hide()
 	if eventTakingPlace:
 		if eventType == 'algalBloom':
 			pass
@@ -59,6 +59,6 @@ func random_processes():
 func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_ENTER:
-			$vomit_popup.hide()
-			$mating_popup.hide()
+			$GUI/vomit_popup.hide()
+			$GUI/mating_popup.hide()
 			get_tree().paused = false

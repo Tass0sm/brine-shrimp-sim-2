@@ -51,9 +51,6 @@ func _process(delta):
 		var angular_speed_vari = custom_data.r
 		var scale_speed_vari = custom_data.g
 		
-		print("base", currentScaleSpeed)
-		print("scale_speed_var", scale_speed_vari)
-		
 		t = t.scaled(Vector3(1, 1, 1) + (Vector3(1, 1, 1) * (currentScaleSpeed + scale_speed_vari) * delta))
 		#t = t.translated(currentWaveDirection * currentWaveSpeed * delta)
 		t = t.rotated(currentWaveRotationAxis, (currentWaveAngularSpeed + angular_speed_vari) * delta)

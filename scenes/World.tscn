@@ -40,6 +40,17 @@ stream = ExtResource( 5 )
 [node name="EventManager" type="Node" parent="."]
 script = ExtResource( 2 )
 
+[node name="EventPeriodTimer" type="Timer" parent="EventManager"]
+wait_time = 5.0
+autostart = true
+
+[node name="WaitTimer" type="Timer" parent="EventManager"]
+wait_time = 5.0
+
 [node name="GUI" parent="." instance=ExtResource( 7 )]
 
+[connection signal="mate" from="EventManager" to="." method="_on_EventManager_mate"]
+[connection signal="normal" from="EventManager" to="." method="_on_EventManager_normal"]
 [connection signal="vomit" from="EventManager" to="." method="_on_EventManager_vomit"]
+[connection signal="timeout" from="EventManager/EventPeriodTimer" to="EventManager" method="_on_EventPeriodTimer_timeout"]
+[connection signal="timeout" from="EventManager/WaitTimer" to="EventManager" method="_on_WaitTimer_timeout"]

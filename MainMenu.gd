@@ -12,15 +12,14 @@ signal credits_pressed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	$title.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 func _on_Play_pressed():
-	emit_signal("play_pressed")
+	get_tree().change_scene("res://World.tscn")
 
 func _on_Instructions_pressed():
 	emit_signal("instructions_pressed")

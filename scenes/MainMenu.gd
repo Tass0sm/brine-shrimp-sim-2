@@ -19,7 +19,7 @@ func _ready():
 #	pass
 
 func _on_Play_pressed():
-	get_tree().change_scene("res://World.tscn")
+	get_tree().change_scene("res://scenes/World.tscn")
 
 func _on_Instructions_pressed():
 	emit_signal("instructions_pressed")
